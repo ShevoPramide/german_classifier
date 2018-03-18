@@ -1,2 +1,2 @@
 # german_classifier
-A trivial program to classify german words, into predetermined categories.
+A trivial program to manually classify german words, into predetermined categories, for learning purposes.

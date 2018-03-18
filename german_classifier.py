@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 import sys
 import time
+import threading
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 import german_classifier_gui
@@ -28,7 +30,16 @@ class MainWindow(QMainWindow, german_classifier_gui.Ui_MainWindow):
 		
 		self.statusBar().setStyleSheet("color: mediumseagreen")
 		
-		self.setStyleSheet('QMenu::item {color: black}')
+		self.setStyleSheet('''
+			QMenu::item {
+				color: black;
+				background-color: white;
+			}
+			QMenu::item:selected {
+				background-color: #2f8cc5;
+				color: white;
+			}
+			''')
 		
 
 	def add(self):
@@ -121,7 +132,8 @@ class MainWindow(QMainWindow, german_classifier_gui.Ui_MainWindow):
 		
 		# delete from the database
 		id = item.data(Qt.UserRole)
-		db_helpers.remove(id)
+		# run the removal operation in another thread, to avoid unexplained delay!
+		threading.Thread(target=lambda: db_helpers.remove(id)).start()
 		
 		
 		

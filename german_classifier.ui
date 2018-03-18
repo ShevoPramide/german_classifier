@@ -15,20 +15,16 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
-    <property name="leftMargin">
+    <property name="margin">
      <number>5</number>
-    </property>
-    <property name="topMargin">
-     <number>5</number>
-    </property>
-    <property name="rightMargin">
-     <number>5</number>
-    </property>
-    <property name="bottomMargin">
-     <number>1</number>
     </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">QListWidget::item {
+padding: 10px;
+}</string>
+      </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
       </property>
@@ -49,9 +45,9 @@
       </property>
       <widget class="QWidget" name="main_tab">
        <attribute name="title">
-        <string>main</string>
+        <string>&amp;Main</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
+       <layout class="QVBoxLayout" name="verticalLayout_9">
         <property name="margin">
          <number>0</number>
         </property>
@@ -85,167 +81,182 @@ border: none;</string>
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>122</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
           <item>
-           <spacer name="horizontalSpacer">
+           <spacer name="verticalSpacer">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>40</width>
-              <height>20</height>
+              <width>20</width>
+              <height>120</height>
              </size>
             </property>
            </spacer>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_7">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <widget class="QLineEdit" name="word_edit">
-              <property name="minimumSize">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
                <size>
-                <width>500</width>
-                <height>0</height>
+                <width>40</width>
+                <height>20</height>
                </size>
               </property>
-              <property name="font">
-               <font>
-                <pointsize>20</pointsize>
-                <weight>75</weight>
-                <italic>true</italic>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
+             </spacer>
             </item>
             <item>
-             <widget class="QComboBox" name="class_combo">
-              <property name="layoutDirection">
-               <enum>Qt::LeftToRight</enum>
-              </property>
-              <property name="currentIndex">
-               <number>0</number>
-              </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
               <item>
-               <property name="text">
-                <string>Articles</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Animals</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Vegetabls</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Simple Verbs</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Phrasal Verbs</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <spacer name="horizontalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="submit_button">
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(42, 42, 42);
-color: rgb(255, 255, 255);</string>
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
                 </property>
                 <property name="text">
-                 <string>Submit</string>
+                 <string>Classify</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
               <item>
-               <spacer name="horizontalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
+               <widget class="QLineEdit" name="word_edit">
+                <property name="minimumSize">
                  <size>
-                  <width>40</width>
-                  <height>20</height>
+                  <width>500</width>
+                  <height>0</height>
                  </size>
                 </property>
-               </spacer>
+                <property name="font">
+                 <font>
+                  <pointsize>20</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                  <weight>75</weight>
+                  <italic>true</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>in</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="category_combo">
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="currentIndex">
+                 <number>-1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <spacer name="horizontalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="submit_button">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(42, 42, 42);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>&amp;Submit</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
              </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
           <item>
-           <spacer name="horizontalSpacer_2">
+           <spacer name="verticalSpacer_2">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>40</width>
-              <height>20</height>
+              <width>20</width>
+              <height>120</height>
              </size>
             </property>
            </spacer>
           </item>
          </layout>
         </item>
-        <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>122</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="articles_tab">
        <attribute name="title">
-        <string>Articles</string>
+        <string>&amp;Articles</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
         <item>
@@ -328,11 +339,6 @@ color: rgb(0, 85, 127);</string>
            <property name="styleSheet">
             <string notr="true">color: crimson;</string>
            </property>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
           </widget>
           <widget class="QListWidget" name="das_list">
            <property name="font">
@@ -346,11 +352,6 @@ color: rgb(0, 85, 127);</string>
             <string notr="true">color: rgb(66, 141, 77);
 color: rgb(255, 85, 0);</string>
            </property>
-           <item>
-            <property name="text">
-             <string>das Benzin</string>
-            </property>
-           </item>
           </widget>
           <widget class="QListWidget" name="der_list">
            <property name="font">
@@ -363,116 +364,6 @@ color: rgb(255, 85, 0);</string>
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 85, 127);</string>
            </property>
-           <item>
-            <property name="text">
-             <string>der Vater</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Junge</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Stier</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>der Mann</string>
-            </property>
-           </item>
           </widget>
          </widget>
         </item>
@@ -480,7 +371,7 @@ color: rgb(255, 85, 0);</string>
       </widget>
       <widget class="QWidget" name="animals_tab">
        <attribute name="title">
-        <string>Animals</string>
+        <string>A&amp;nimals</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
@@ -488,355 +379,22 @@ color: rgb(255, 85, 0);</string>
           <property name="font">
            <font>
             <family>Sans Serif</family>
-            <pointsize>14</pointsize>
+            <pointsize>16</pointsize>
             <italic>false</italic>
            </font>
           </property>
-          <property name="isWrapping" stdset="0">
-           <bool>true</bool>
+          <property name="styleSheet">
+           <string notr="true">QListWidget::item {
+padding: 10px;
+}</string>
           </property>
-          <item>
-           <property name="text">
-            <string>isdilf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sdlkjfljs</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sdl</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jlsdkjlf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sjlj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lsjd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>j</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lksdjlkj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sdljf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ljsl/k</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jsdljl</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kjsd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kjlksd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jl/kj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lsdj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>.j</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>klsdjf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/lsdj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lfkjsd/lk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jfkj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/lksjd/</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lkjsd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lfkjsdkljlk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sjdk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>js/ks</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>dfj.dfskjd;dfjkjdsksja</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jsad</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kjkdsa.j</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>dfskj.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sjsadk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jasdk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>j.kjdsa.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>.ksdjfksdjkfiwejf;WKkK.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KSD?</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>k</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>M</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K/</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LFKDSAL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KLSDK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>FNSAD,MF,MSN,</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>MVXBCAAH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJAS</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JVLJSDLIJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JSDAL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KJDSLKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>SLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JLKJLKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>SDLJKJSD</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/LDSJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKSDAJLSDJLKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LSDJLKVJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>SLDKJSLJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LSJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/SL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J/SADLJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L/J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>DLSAJ</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="vegetabls_tab">
        <attribute name="title">
-        <string>Vegetabls</string>
+        <string>&amp;Vegetables</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
@@ -844,355 +402,22 @@ color: rgb(255, 85, 0);</string>
           <property name="font">
            <font>
             <family>Sans Serif</family>
-            <pointsize>14</pointsize>
+            <pointsize>16</pointsize>
             <italic>false</italic>
            </font>
           </property>
-          <property name="isWrapping" stdset="0">
-           <bool>true</bool>
+          <property name="styleSheet">
+           <string notr="true">QListWidget::item {
+padding: 10px;
+}</string>
           </property>
-          <item>
-           <property name="text">
-            <string>isdilf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sdlkjfljs</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sdl</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jlsdkjlf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sjlj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lsjd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>j</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lksdjlkj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sdljf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ljsl/k</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jsdljl</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kjsd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kjlksd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jl/kj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lsdj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>.j</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>klsdjf</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/lsdj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lfkjsd/lk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jfkj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/lksjd/</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lkjsd</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>lfkjsdkljlk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sjdk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>js/ks</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>dfj.dfskjd;dfjkjdsksja</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jsad</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kjkdsa.j</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>dfskj.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>sjsadk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>jasdk</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>j.kjdsa.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>kj</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>.ksdjfksdjkfiwejf;WKkK.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KSD?</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>k</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>M</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K/</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LFKDSAL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KLSDK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>FNSAD,MF,MSN,</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>MVXBCAAH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJAS</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JVLJSDLIJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JSDAL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KJDSLKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>SLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JLKJLKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>SDLJKJSD</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/LDSJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKSDAJLSDJLKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LSDJLKVJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>SLDKJSLJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LSJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>/SL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J/SADLJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L/J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>DLSAJ</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="simple_tab">
        <attribute name="title">
-        <string>Simple Verbs</string>
+        <string>S&amp;imple Verbs</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
@@ -1200,520 +425,17 @@ color: rgb(255, 85, 0);</string>
           <property name="font">
            <font>
             <family>Sans Serif</family>
-            <pointsize>14</pointsize>
+            <pointsize>16</pointsize>
             <italic>false</italic>
            </font>
           </property>
-          <property name="isWrapping" stdset="0">
-           <bool>true</bool>
-          </property>
-          <item>
-           <property name="text">
-            <string>SDFKJD H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LSK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKAL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ALK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ASLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AALNALKSNALSKNLKL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AKLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NALSKL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NLAKSNLKNALN</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NNNAKSNLANASLKL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ASNLKSALKALK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NASLKNAS</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NNNN</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>N</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>N</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>N</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JUL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>;L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>G</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>'</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>'L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>''</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>G</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>T</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>T9</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>87</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L';</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L'</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KG</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>GF</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JHJK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>[[O[</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>-9</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Y</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>T</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>F</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JK;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>;L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JHG</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JF</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>GFJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JKH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>;J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KLN</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="phrasal_tab">
        <attribute name="title">
-        <string>Phrasal Verbs</string>
+        <string>&amp;Phrasal Verbs</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
@@ -1721,513 +443,15 @@ color: rgb(255, 85, 0);</string>
           <property name="font">
            <font>
             <family>Sans Serif</family>
-            <pointsize>14</pointsize>
+            <pointsize>16</pointsize>
             <italic>false</italic>
            </font>
           </property>
-          <property name="isWrapping" stdset="0">
-           <bool>true</bool>
+          <property name="styleSheet">
+           <string notr="true">QListWidget::item {
+padding: 10px;
+}</string>
           </property>
-          <item>
-           <property name="text">
-            <string>SDFKJD H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LSK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKAL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ALK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ASLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AALNALKSNALSKNLKL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AKLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NALSKL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NLAKSNLKNALN</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NNNAKSNLANASLKL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ASNLKSALKALK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NASLKNAS</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NNNN</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>N</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>N</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>N</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NLK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JUL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>;L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>G</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>'</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>'L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>''</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>G</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>T</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>T9</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>87</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L';</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>L'</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LKJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KG</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>GF</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JHJK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>H</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>[[O[</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>-9</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Y</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>T</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>F</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KL</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>J;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JK;</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>K</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>;L</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>.</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JHG</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JF</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>GFJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>JKH</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LJ</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>;J</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>KLN</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LK</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>New Item</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>

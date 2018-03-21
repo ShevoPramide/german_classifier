@@ -9,6 +9,17 @@ def _connect():
 	conn = sqlite3.connect(_db)
 	c = conn.cursor()
 	return conn, c
+	
+
+def create_table():
+	conn, c = _connect()
+	c.execute("""CREATE TABLE IF NOT EXISTS words(
+		id integer primary key autoincrement,
+		word text,
+		category text)""")
+	conn.commit()
+	c.close()
+	conn.close()
 
 def get(category):
 	conn, c = _connect()

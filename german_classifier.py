@@ -11,6 +11,9 @@ class MainWindow(QMainWindow, german_classifier_gui.Ui_MainWindow):
 	def __init__(self, parent=None):
 		super().__init__(parent=parent)
 		self.setupUi(self)
+		self.setWindowTitle("German Classifier")
+		
+		db_helpers.create_table()
 		
 		self.categories = ["Articles", "Animals", "Vegetables",
 			"Simple Verbs", "Phrasal Verbs"]
